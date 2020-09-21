@@ -1,13 +1,16 @@
+require_relative 'apple_creator.rb'
+require_relative 'orange_creator.rb'
+
 class FruitApplication
     attr_accessor :fruit
 
     def initialize(fruit_type)
         if fruit_type == 'apple'
-            fruit = AppleCreator.new
+            @fruit = AppleCreator.new
         elsif fruit_type == 'orange'
-            fruit = OrangeCreator.new
+            @fruit = ::OrangeCreator.new
         # elsif fruit_type == 'banana' # COULD EASILY ADD
-        #     fruit = BananaCreator.new
+        #     @fruit = BananaCreator.new
         else
             # raise an error
         end

@@ -1,3 +1,6 @@
+require_relative 'fruit_creator.rb'
+require_relative 'orange.rb'
+
 class OrangeCreator < FruitCreator
 
     def create_fruit
