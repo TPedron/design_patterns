@@ -6,20 +6,12 @@ class FruitCreator
         # concrete creators Apple/OrangeCreator classes.
     end
 
-    def create_desert()
-
-    end
-
     # core business method on based creator class
     # not implemented in apple/orange sub creator classes
     # could be overridden in a creator subclass if needed
-    def render_fruit()
+    def make_dessert()
         fruit = create_fruit()
-
-        fruit.do_stuff('grow-on-tree')
-
         desert = create_desert()
-
-        desert.print_msg()
+        puts "Make a tasty #{fruit.name} #{desert.name}!"
     end
 end

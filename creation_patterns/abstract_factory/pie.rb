@@ -1,6 +1,6 @@
 class Pie
 
-    def print_msg
-        puts "I am a tasty pie"
+    def name
+        "Pie"
     end
 end

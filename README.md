@@ -18,7 +18,7 @@ The example implements a Fruit building application that selects the correct Fru
 Same as the “Factory Method Pattern" but each factory builds multiple object-types that are related
 
 ### Example
-Copy/Paster the Factory Pattern and added an extra relevant object to be built by each FruitBuilder.  Not a great example but it helps differentiate between the 2.
+Copy/Paste of the Factory Pattern example and added an extra relevant object to be built by each FruitBuilder.  The FruitCreator business logic builds a dessert type based on 2 models built by each sub-factory class.
 
 ## Singleton Pattern
 

@@ -12,5 +12,5 @@ class AppleCreator < FruitCreator
         return Pie.new
     end
 
-    # Inherits render_fruit() method from FruitCreator
+    # Inherits make_dessert() method from FruitCreator
 end

@@ -1,6 +1,6 @@
-class Sorbetr
+class Sorbet
 
-    def print_msg
-        puts "I am a cold sorbet!"
+    def name
+        "Sorbet"
     end
 end

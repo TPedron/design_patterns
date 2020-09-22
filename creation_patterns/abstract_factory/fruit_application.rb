@@ -17,13 +17,17 @@ class FruitApplication
     end
 
     def perform()
-        fruit.render_fruit()
+        fruit.make_dessert()
     end
 
 end
 
 # run application 
 application = FruitApplication.new('apple')
-
 application.perform()
-# expect 'Apple doing grow-on-tree \n I am a tasty pie' to print
+application = FruitApplication.new('orange')
+application.perform()
+
+# OUTPUT
+# Make a tasty Apple Pie!
+# Make a tasty Orange Sorbet!
