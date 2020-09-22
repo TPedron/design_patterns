@@ -35,7 +35,15 @@ The Singleton is some sort of global state with a score attribute (maybe for a g
 ## Strategy Pattern
 
 ### Description
-Instead of classes inheriting behaviour from each other, move towards extracting behaviour into components that can reused across classes to prevent incorrect hierarchies
+Composition over inheritance! Instead of classes inheriting behaviours from each other in a bad hierarchy, move towards extracting behaviour into components that can reused across classes.
 
 ### Example
-Ruby supports duck-typing so I figured I would implement a few Duck classes that inherit some behavior, override others and all behaviors are swappable components conforming to an interface.
+Ruby supports duck-typing so I figured I would implement a few Duck classes that inherit/override behaviors like Quack, Fly and Swim. All behaviors are swappable components conforming to an interface.
+
+## Observer Pattern
+
+### Description
+Obvervable subject classes publish notifications on state change to 1+ Observer classes that are subscribed to the subject. Observer classes are instantiated with the subject so there is a link to the class to access the new state when notified.
+
+### Example
+Account class allows services to subscribe for updates to the account (in this case, SMS and Email services subscribe and perform their own business logic)
