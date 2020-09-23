@@ -54,6 +54,14 @@ Facade classes provide a unified interface to a set of interfaces to simplify us
 ### Example
 Turning a car facade on causes several actions to occur inside the car that are taken care of by the facade such as lights, engine, radio and navigation components.  For the client, its as simple as turning the key!
 
+## 2.4 Proxy Pattern
+
+### Description
+Proxies wrap a resource with the intent of controller access to it. There are different ways of doing this (remote/virtual/protection styles) but they act as the object they wrap to allow for clients to interact with it without knowing its a proxy while the proxy also provides additional behavior around access.
+
+### Example
+We have a Book class that when instantiated loads the entire contents of a book as a massive string. However, this book object for whatever reason in the codebase is often instantiated without needing the contents immediately, causing unnecessary IO and memory usage as well expensive parsing of the book string. So, we build a BookProxy class with the same interface as the Book that will instantiate the Book and delegate calls to it only when we actually need it loaded.
+
 # 3. Behavioral Patterns
 
 ## 3.1 Strategy Pattern
