@@ -1,6 +1,6 @@
 # design_patterns
 
-Simple implementations of many common Design Patterns in Ruby without Rails or other gems.
+Simple implementations of many common Design Patterns in Ruby without Rails or other gems. Each pattern example has its own folder with an `application.rb` file that can be run via `ruby <relative path>` running a demo.
 
 # 1. Creation Patterns
 
@@ -38,6 +38,14 @@ A way to change behavior of an object at runtime by wrapping it in a decorator o
 ### Example
 We have 2 types of beverages: Tea and Coffee.  You can easily add ingredients that have different costs by wrapping it in AddOnDecorators such as Milk, Sugar and FlavorShot.
 
+## 2.2 Adapter Pattern
+
+### Description
+Makes 2 incompatable interfaces compatable by passing along requests. It does not have intelligent logic that converts data in preparation for making an adapted request.
+
+### Example
+A bit more of a skeleton example where we have an adapter that maps calls to its `request` method to it's target adaptee's `specific_request` method.
+
 # 3. Behavioral Patterns
 
 ## 3.1 Strategy Pattern
@@ -62,4 +70,4 @@ Account class allows services to subscribe for updates to the account (in this c
 Define explicit objects with execute and undo methods that act upon a receiving object passed on construction.  Build an invoker that has instance methods of these command object and calls them.  It can store history of commands executed allowing for simple rollback of several commands.
 
 ### Example
-We have a SmartLightInvoker representing a remote control for a smart light system (SmartLightReceiver) with on and off buttons.  We pass in command objects (TurnOn.OffCommands) and assign them to each button and then click the buttons.  Each command executed is saved to a commands history array that when iterated over in reverse, we can call each's undo command in the correct order to fully undo all commands called.
+We have a SmartLightInvoker representing a remote control for a smart light system (SmartLightReceiver) with on and off buttons.  We pass in command objects (TurnOn/OffCommands) and assign them to each button and then click the buttons.  Each command executed is saved to a commands history array that when iterated over in reverse, we can call each's undo command in the correct order to fully undo all commands called.
