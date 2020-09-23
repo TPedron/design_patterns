@@ -30,6 +30,14 @@ The Singleton is some sort of global state with a score attribute (maybe for a g
 
 # Structural Patterns
 
+## Decorator Pattern
+
+### Description
+A way to change behavior of an object at runtime by wrapping it in a decorator object which is is a subclass that has an instance of the class.  Nested wrapping allows for simple delegation of methods.
+
+### Example
+We have 2 types of beverages: Tea and Coffee.  You can easily add ingredients that have different costs by wrapping it in AddOnDecorators such as Milk, Sugar and FlavorShot.
+
 # Behavioral Patterns
 
 ## Strategy Pattern
