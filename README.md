@@ -15,7 +15,7 @@ The example implements a Fruit building application that selects the correct Fru
 ## 1.2 Abstract Factory Pattern
 
 ### Description
-Same as the “Factory Method Pattern" but each factory builds multiple object-types that are related
+Same as the “Factory Method Pattern" but each factory builds multiple object-types that are related.
 
 ### Example
 Copy/Paste of the Factory Pattern example and added an extra relevant object to be built by each FruitBuilder.  The FruitCreator business logic builds a dessert type based on 2 models built by each sub-factory class.
@@ -46,12 +46,20 @@ Makes 2 incompatable interfaces compatable by passing along requests. It does no
 ### Example
 A bit more of a skeleton example where we have an adapter that maps calls to its `request` method to it's target adaptee's `specific_request` method.
 
+## 2.3 Facade Pattern
+
+### Description
+Facade classes provide a unified interface to a set of interfaces to simplify usage of the set of interaces.  Basically a helper class.
+
+### Example
+Turning a car facade on causes several actions to occur inside the car that are taken care of by the facade such as lights, engine, radio and navigation components.  For the client, its as simple as turning the key!
+
 # 3. Behavioral Patterns
 
 ## 3.1 Strategy Pattern
 
 ### Description
-Composition over inheritance! Instead of classes inheriting behaviours from each other in a bad hierarchy, move towards extracting behaviour into components that can reused across classes.
+Composition over inheritance! Instead of classes inheriting behaviours (algorithms) from each other in a bad hierarchy, move towards extracting behaviour into components that can reused and interchanged across classes.
 
 ### Example
 Ruby supports duck-typing so I figured I would implement a few Duck classes that inherit/override behaviors like Quack, Fly and Swim. All behaviors are swappable components conforming to an interface.
