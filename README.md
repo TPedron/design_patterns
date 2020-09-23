@@ -1,4 +1,4 @@
-# design_patterns
+# Design Patterns in Ruby
 
 Simple implementations of many common Design Patterns in Ruby without Rails or other gems. Each pattern example has its own folder with an `application.rb` file that can be run via `ruby <relative path>` running a demo.
 
