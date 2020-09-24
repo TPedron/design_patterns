@@ -62,6 +62,14 @@ Proxies wrap a resource with the intent of controller access to it. There are di
 ### Example
 We have a Book class that when instantiated loads the entire contents of a book as a massive string. However, this book object for whatever reason in the codebase is often instantiated without needing the contents immediately, causing unnecessary IO and memory usage as well expensive parsing of the book string. So, we build a BookProxy class with the same interface as the Book that will instantiate the Book and delegate calls to it only when we actually need it loaded.
 
+## 2.5 Bridge Pattern
+
+### Description
+Decouple an abstraction from its implementation so the 2 can vary independently. We have an Abstraction interface and an Implementor interface, both with several concretions. The concrete abstractions contain a concrete Implementation that can be used in tandem.
+
+### Example
+We have 2 classes that implement a View interface, one for a long form post and 1 for a short form post.  They have a show method that prints out something view-like (didn't want to implement an HTML generator for this.) Each is constructed with a media resource that implements the same interface allowing each view to retrieve data needed to build the view via a provided object that has the required data (Artist/Book).
+
 # 3. Behavioral Patterns
 
 ## 3.1 Strategy Pattern
