@@ -75,10 +75,10 @@ We have 2 classes that implement a View interface, one for a long form post and 
 ## 3.1 Strategy Pattern
 
 ### Description
-Composition over inheritance! Instead of classes inheriting behaviours (algorithms) from each other in a bad hierarchy, move towards extracting behaviour into components that can reused and interchanged across classes.
+Composition over inheritance! Instead of classes inheriting behaviours/algorithms from each other in a bad hierarchy, move towards extracting behaviour into components that can reused and interchanged across classes.
 
 ### Example
-Ruby supports duck-typing so I figured I would implement a few Duck classes that inherit/override behaviors like Quack, Fly and Swim. All behaviors are swappable components conforming to an interface.
+Ruby supports duck-typing so I figured I would implement a few Duck classes that inherit/override behaviors like Quack, Fly and Swim. All behaviors are swappable components conforming to an interface. Note that none of the algorithms do anything more than print something out.
 
 ## 3.2 Observer Pattern
 
@@ -95,3 +95,11 @@ Define explicit objects with execute and undo methods that act upon a receiving 
 
 ### Example
 We have a SmartLightInvoker representing a remote control for a smart light system (SmartLightReceiver) with on and off buttons.  We pass in command objects (TurnOn/OffCommands) and assign them to each button and then click the buttons.  Each command executed is saved to a commands history array that when iterated over in reverse, we can call each's undo command in the correct order to fully undo all commands called.
+
+## 3.4 Template Method Pattern
+
+### Description
+A skeleton of an algorithm (whos structure should not change) is defined with invariant portions implemented in a template method that defers variant portions to subclasses to implement. The skeleton should not be instantiated on its own and instead we should only instantiate the concrete subclasses that complete the template. The template method should not be overwritten in the concrete class. It differs from the strategy pattern in that it relies on inheritance instead of composition.
+
+### Example
+Built an abstract Worker template class that prints out a routine for the worker.  We have concrete FireFighter and Programmer workers implementing the variants of the Worker template.  The implementation "algorithms" are just printing out strings but it gets the point across.
