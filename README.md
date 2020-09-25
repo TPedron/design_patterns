@@ -70,6 +70,14 @@ Decouple an abstraction from its implementation so the 2 can vary independently.
 ### Example
 We have 2 classes that implement a View interface, one for a long form post and 1 for a short form post.  They have a show method that prints out something view-like (didn't want to implement an HTML generator for this.) Each is constructed with a media resource that implements the same interface allowing each view to retrieve data needed to build the view via a provided object that has the required data (Artist/Book).
 
+## 2.6 Composite Pattern
+
+### Description
+We define a component interface with an execution method, and Leaf (single item) and Composite (container of multiple items that can be composite or leafs) classes that implement that interface. Then we build a tree using these classes.  Composites delegate to its children on execution method call while leafs implement logic in their execute method. Works really well for tree-structures.
+
+### Example
+Implement a hierarchical todos list which can have projects containing multiple sub-todos. This tree implementation is immutable and generates nested list html of the project/todo structure. I could have implemented a more complex dynamic tree with add and remove methods but chose not to. Sample output of the html is provided.
+
 # 3. Behavioral Patterns
 
 ## 3.1 Strategy Pattern
