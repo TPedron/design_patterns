@@ -111,3 +111,12 @@ A skeleton of an algorithm (whos structure should not change) is defined with in
 
 ### Example
 Built an abstract Worker template class that prints out a routine for the worker.  We have concrete FireFighter and Programmer workers implementing the variants of the Worker template.  The implementation "algorithms" are just printing out strings but it gets the point across.
+
+## 3.5 Iterator Pattern
+
+### Description
+A collection-wrapping class that enables iteration (loop through) and enumeration (apply operation to each) over the internal collection without the client needing to consider for the structure or types of the internal collection. The collection class returns an iterator conforming to the interator interface that can be used to iterate over the collection data.
+
+### Example
+We have a house that implements floors, rooms and windows.  Houses are floor collections that return floor iterators, floors are room collections returning room iterators and rooms are window collections that return window iterators. The Houses/Floors/Rooms/Windows hierarchy represents a tree-like structure that we want to flatten and iterate over using these iterators. We can also apply an open_all or close_all method which will apply open or close operations to all windows.
+
