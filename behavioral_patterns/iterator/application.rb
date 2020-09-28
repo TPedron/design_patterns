@@ -48,3 +48,24 @@ while floor_iterator.has_next? do
         end
     end
 end
+
+### OUTPUT
+# Basement Floor
+# ---- Man Cave
+# -------- Opening Window
+# Main Floor
+# ---- Kitchen
+# -------- Opening Window
+# -------- Opening Window
+# ---- Living Room
+# -------- Opening Window
+# -------- Opening Window
+# -------- Opening Window
+# Second Floor
+# ---- Master Bedroom
+# -------- Opening Window
+# -------- Opening Window
+# -------- Opening Window
+# ---- Guest Bedroom
+# -------- Opening Window
+# -------- Opening Window
