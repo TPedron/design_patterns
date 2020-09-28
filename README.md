@@ -136,3 +136,10 @@ Replace passing null around and instead pass polymorphic null-versions of classe
 ### Example
 We implement a simple Animal class with several subclasses including Cat, Dog and NullAnimal to handle the scenario of a null animal with a NullAnimal class.
 
+## 3.7 Chain of Responsibility Pattern
+
+### Description
+This pattern sends data to an object and if that object can't use it then it sends it to 1+ other objects that may be able to use it.
+
+### Example
+We build out 4 simply math calculators (+, -, *, /) that acceptsa request with 2 numbers and task string.  The Calculators (handlers) check if it is right for them, else pass it to the next calculator type.
