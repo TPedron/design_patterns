@@ -136,10 +136,18 @@ Replace passing null around and instead pass polymorphic null-versions of classe
 ### Example
 We implement a simple Animal class with several subclasses including Cat, Dog and NullAnimal to handle the scenario of a null animal with a NullAnimal class.
 
-## 3.7 Chain of Responsibility Pattern
+## 3.8 Chain of Responsibility Pattern
 
 ### Description
 This pattern sends data to an object and if that object can't use it then it sends it to 1+ other objects that may be able to use it.
 
 ### Example
 We build out 4 simply math calculators (+, -, *, /) that acceptsa request with 2 numbers and task string.  The Calculators (handlers) check if it is right for them, else pass it to the next calculator type.
+
+## 3.9 Mediator Pattern
+
+### Description
+This pattern helps you reduce chaotic/messy dependencies between colleague objects by forcing communications to go through an object who's responsibility is to enable simpler communication. This allows the objects to not need to know as much/anything about each other since the mediator encapsulates those interactions for them, enabling loose coupling. The colleague objects that want to communicate with eachother and the mediator share the same interface so delegation is enabled in the mediator.
+
+### Example
+We build a simple stock exchange mediator that handles buy and sell offers of stocks between several Colleague buyer classes (Tom/Bob who act the same for simplicity but could act very differently while adhering to the colleague interface).  Method calls to the colleagues are delegated to the mediator who handles the transactions.
