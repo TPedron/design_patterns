@@ -120,3 +120,10 @@ A collection-wrapping class that enables iteration (loop through) and enumeratio
 ### Example
 We have a house that implements floors, rooms and windows.  Houses are floor collections that return floor iterators, floors are room collections returning room iterators and rooms are window collections that return window iterators. The Houses/Floors/Rooms/Windows hierarchy represents a tree-like structure that we want to flatten and iterate over using these iterators. We can also apply an open_all or close_all method which will apply open or close operations to all windows.
 
+## 3.6 State Pattern
+
+### Description
+A context class delegates to its current state.  All state classes implement the same interface called by the context so that the context behaves differently based on the state of the context. The next state for the context is determined by the state implementation that has a reference back to the context.
+
+### Example
+We implement a simple gate system that requires successful payment to allow someone to enter through the gate. The GateContext delegates its methods to its current GateState (Open/Closed).
