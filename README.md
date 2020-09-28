@@ -127,3 +127,12 @@ A context class delegates to its current state.  All state classes implement the
 
 ### Example
 We implement a simple gate system that requires successful payment to allow someone to enter through the gate. The GateContext delegates its methods to its current GateState (Open/Closed).
+
+## 3.7 Null Object Pattern
+
+### Description
+Replace passing null around and instead pass polymorphic null-versions of classes. This allows us to stop doing null-checks in our code and instead just implemenent behaviors for the null-versions of classes.
+
+### Example
+We implement a simple Animal class with several subclasses including Cat, Dog and NullAnimal to handle the scenario of a null animal with a NullAnimal class.
+
