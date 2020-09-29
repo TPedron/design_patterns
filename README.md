@@ -86,6 +86,14 @@ We define a component interface with an execution method, and Leaf (single item)
 ### Example
 Implement a hierarchical todos list which can have projects containing multiple sub-todos. This tree implementation is immutable and generates nested list html of the project/todo structure. I could have implemented a more complex dynamic tree with add and remove methods but chose not to. Sample output of the html is provided.
 
+## 2.7 Flyweight
+
+### Description
+The purpose of this pattern is to allow for programs to build vast quantities of objects while reducing memory usage by sharing parts of object state between multiple objects.
+
+### Example
+We build out a car database containing flyweights. Unique instances of cars have several shared fields that are unique between them such as make, model and color.  What is unique about a car instance is its plates and owner. So we essentially build a cache of non-unique car combinations and use them when appropriate for vehicles being added to the database.
+
 # 3. Behavioral Patterns
 
 ## 3.1 Strategy Pattern
