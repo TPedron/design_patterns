@@ -159,3 +159,12 @@ This pattern helps you reduce chaotic/messy dependencies between colleague objec
 
 ### Example
 We build a simple stock exchange mediator that handles buy and sell offers of stocks between several Colleague buyer classes (Tom/Bob who act the same for simplicity but could act very differently while adhering to the colleague interface).  Method calls to the colleagues are delegated to the mediator who handles the transactions.
+
+## 3.10 Memento Pattern
+
+### Description
+Allows for storing previous states of an object easily by creating history objects called mementos, storing them in an ordered list that can be iterated on to retrieve history as it changed.
+
+### Example
+We keep track of the updates to a string called article by having a memento object that holds a version of the string, an originator that creates and memento history objects and a caretaker that organizes them in order and allows for retrieval.
+
