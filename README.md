@@ -28,6 +28,14 @@ Class with a private constructor and a public class method called instance that 
 ### Example
 The Singleton is some sort of global state with a score attribute (maybe for a game or something)
 
+## 1.4 Prototype Pattern
+
+### Description
+Objects implement a cloneable interface that exposes a make_copy method on an object.  The purpose of this is to ensure that classes take responsibility for cloning logic including any private fields or internal things that would make this difficult from outside the class. When classes all follow this cloneable interface is makes the client not need to worry about class type returned since it will be of a type implementing this interface.
+
+### Example
+We make a couple Animal classes (not subclasses of an Animal type) but both implementing the Cloneable interface with a make_copy method exposed.  Dog has a simple copy and Fish has more custom logic involved. 
+
 # 2. Structural Patterns
 
 ## 2.1 Decorator Pattern
