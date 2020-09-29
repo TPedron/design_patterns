@@ -176,3 +176,10 @@ Allows for storing previous states of an object easily by creating history objec
 ### Example
 We keep track of the updates to a string called article by having a memento object that holds a version of the string, an originator that creates and memento history objects and a caretaker that organizes them in order and allows for retrieval.
 
+## 3.11 Visitor Pattern
+
+### Description
+This pattern allows several classes to implement the Visitor interface (a method called accept that takes in a Visitor object). A visitor object enables you to implement a method for that class without it being stored on the class. This allows you to define external classes that can extend the functionality of other classes without editing them.
+
+### Example
+We implement a tax calculator visitor that will tax basic and alcoholic products with different tax percentages.  We can then pass that visitor to the basic and alcohol product's accept method and run the tax logic implemented on the visitor on that product's price field based on the class type.
